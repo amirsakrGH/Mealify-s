@@ -1,0 +1,73 @@
+:root:has(.mode input:checked) {
+  /* ? ###### Colors */
+
+  --color-default: #fff;
+  --color-secondary: #fff;
+  --color-tertiary: #9f9f9f;
+  --color-light-gray: #252525;
+
+  --primary-hue: 35;
+  --primary-saturation: 72%;
+  --primary-lightness: 44%;
+  --color-primary: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    var(--primary-lightness)
+  );
+
+  --light-hue: 0;
+  --light-saturation: 0%;
+  --light-lightness: 9%;
+  --color-light: hsl(
+    var(--light-hue),
+    var(--light-saturation),
+    var(--light-lightness)
+  );
+}
+
+
+body:has(.mode input:checked) {
+  background-color: #202020;
+}
+
+body:has(.mode input:checked) .chefs-cards .card figure::before  {
+  background-image: url(./../images/team-shape-dark.svg);
+}
+
+
+body:not(:has(:target)):has(.mode input:checked) nav ul li:nth-child(2) a ,
+body:has(.home:target):has(.mode input:checked) nav ul li:nth-child(2) a ,
+body:has(.chefs:target):has(.mode input:checked) nav ul li:nth-child(3) a ,
+body:has(.gallery:target):has(.mode input:checked) nav ul li:nth-child(4) a ,
+body:has(.contact:target):has(.mode input:checked) nav ul li:nth-child(5) a {
+  color: #fff;
+}
+
+body:not(:has(:target)):has(.mode input:checked) nav ul li:nth-child(2) a::before, 
+body:has(.home:target):has(.mode input:checked) nav ul li:nth-child(2) a::before ,
+body:has(.chefs:target):has(.mode input:checked) nav ul li:nth-child(3) a::before ,
+body:has(.gallery:target):has(.mode input:checked) nav ul li:nth-child(4) a::before ,
+body:has(.contact:target):has(.mode input:checked) nav ul li:nth-child(5) a::before {
+  width: 100%;
+}
+
+
+body:has(.mode input:checked) nav ul li a:hover{
+  color: #fff;
+}
+
+body:has(.mode input:checked) .mode .light{
+  display: block;
+}
+body:has(.mode input:checked) .mode .dark{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
